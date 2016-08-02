@@ -82,6 +82,7 @@ func errRecoverWithPGReason(err *error) {
 
 func errRecover(err *error) {
 	e := recover()
+	fmt.Printf("%s", e)
 	switch v := e.(type) {
 	case nil:
 		// Do nothing
